@@ -13,6 +13,7 @@ get "/secret" do
 	end
 
 get "/cat" do 
+	@name = ["Foxy Fumz", "Racy Rita", "Handy Hodan","Saucy Sally"].sample
 	erb(:index)
 	# erb "Cat visitor <%= 6 + 12 %>!"
 
