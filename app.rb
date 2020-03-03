@@ -12,10 +12,17 @@ get "/secret" do
 	"Third attemp using shotgun"
 	end
 
-get "/cat" do 
+get "/random-cat" do 
 	@name = ["Foxy Fumz", "Racy Rita", "Handy Hodan","Saucy Sally"].sample
+	@color = ["Red", "Purple"].sample
 	erb(:index)
 	# erb "Cat visitor <%= 6 + 12 %>!"
+end
 
+get "/named-cat" do
+	p params
+	@name = params[:name]
+	@color = params[:color]
+	erb(:index)
 end
 end
