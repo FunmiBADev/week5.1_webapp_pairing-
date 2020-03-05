@@ -19,10 +19,15 @@ get "/random-cat" do
 	# erb "Cat visitor <%= 6 + 12 %>!"
 end
 
-get "/named-cat" do
+get "/cat-form" do 
+	erb(:cat_form)
+end
+
+post "/named-cat" do
 	p params
 	@name = params[:name]
 	@color = params[:color]
 	erb(:index)
 end
+
 end
